@@ -38,9 +38,9 @@ class JobboleSpider(scrapy.Spider):
             # 但是extract()[0]的方式会返回异常
 
             # next_url = response.xpath('//*[@class="next page-numbers"]/@href').extract()[0]
-            next_url = response.xpath('//*[@class="next page-numbers"]/@href').extract_first()
-            if next_url:# 继续爬取下一列表页（下一个二级页）
-                yield Request(url=next_url , callback=self.parse)
+        next_url = response.xpath('//*[@class="next page-numbers"]/@href').extract_first()
+        if next_url:# 继续爬取下一列表页（下一个二级页）
+            yield Request(url=next_url , callback=self.parse)
 
 
     def parse_detail(selfself , response):
