@@ -4,9 +4,11 @@
 ## 1. 项目介绍
 ### 1.1 基本情况
 本爬虫用于采集**伯乐在线、知乎、CSND**等知名IT相关网站中的文章，可用于分析时下IT热点话题及热门技术走向。
+项目中代码有详细的注释，方便日后代码review，并对部分功能用不同方法进行实现，方便学习。
 ### 1.2 下载
 - 下载源码
-git@github.com:ChenHuabin321/ITArticleSpider.git
+
+    git方式下载：git@github.com:ChenHuabin321/ITArticleSpider.git
 
     或者直接到下载zip源码包，地址为：https://github.com/ChenHuabin321/ITArticleSpider
 - 安装依赖
