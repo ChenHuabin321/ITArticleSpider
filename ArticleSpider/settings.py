@@ -33,7 +33,7 @@ ROBOTSTXT_OBEY = False
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -101,7 +101,12 @@ IMAGES_STORE = os.path.join(project_dir , 'images')
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+#MySQL数据库配置
 MYSQL_HOST = '192.168.56.101'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = '123456'
 MYSQL_DBNAME = 'article_spider'
+
+#知乎账号配置
+ZHIHU_ACCOUNT = '18270738780'
+ZHIHU_PASSWORD = 'psd.zh.1132'
