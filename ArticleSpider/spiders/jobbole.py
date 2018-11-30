@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
-import re
 import scrapy
-import datetime
 from scrapy.http import Request
 from ArticleSpider.items import JobboleArticleItem , ArticleItemLoader
-from scrapy.loader import ItemLoader
-
 from ArticleSpider.utils import get_md5
+
 
 class JobboleSpider(scrapy.Spider):
     name = 'jobbole'
@@ -41,7 +38,6 @@ class JobboleSpider(scrapy.Spider):
         next_url = response.xpath('//*[@class="next page-numbers"]/@href').extract_first()
         if next_url:# 继续爬取下一列表页（下一个二级页）
             yield Request(url=next_url , callback=self.parse)
-
 
     def parse_detail(selfself , response):
         """
